@@ -17,9 +17,9 @@ public class AuthController {
 	public String getAuth(String userName, String password) {
 		System.out.println("Came True :: getAuth()");
 		if(authService.getAsuthrized(userName, password)) {
-			return "SUCCESS...!!!";
+			return "<h1 style='color: blue; font: normal; font-size: 50'>SUCCESS...!!!</h1>";
 		} else {
-			return "FAILED...!!!";
+			return "<h1 style='color: blue; font: normal; font-size: 50'>FAILED...!!!</h1>";
 		}
 	}
 	
@@ -32,7 +32,7 @@ public class AuthController {
 		userDomain.setPassword(password);
 		
 		userDomain = authService.createUser(userDomain);
-		return "SUCCESS...!!!";
+		return "<h1 style='color: blue; font: normal; font-size: 50'>SUCCESS...!!!</h1>";
 		
 	}
 }
